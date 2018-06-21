@@ -26,6 +26,7 @@ public class TestPrefix {
     }
 
     @Test
+    // 아무것도 겹치지 않을 시 테스트
     public void testProfix_nothing() {
         String[] words = {"abc", "bcd", "cdef"};
         assertEquals(dp001.getPrefix(words), "");
@@ -36,8 +37,4 @@ public class TestPrefix {
         String[] words = {"hawaii", "happy"};
         assertEquals(dp001.getPrefix(words), "ha");
     }
-
-
-
-
 }
