@@ -1,40 +1,39 @@
 package DP001;
 
-import DP001.Prefix;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestPrefix {
-    public static Prefix dp001;
+public class TestSolution_001 {
+    public static Solution_001 solution;
     @BeforeClass
     public static void init() {
-        dp001 = new Prefix();
+        solution = new Solution_001();
     }
 
     @Test
     public void testPrifix_dog() {
         String[] words = {"dog", "dogs", "doge"};
-        assertEquals(dp001.getPrefix(words), "dog");
+        assertEquals(solution.getPrefix(words), "dog");
     }
 
     @Test
     public void testProfix_ap() {
         String[] words = {"apple", "app", "ape"};
-        assertEquals(dp001.getPrefix(words), "ap");
+        assertEquals(solution.getPrefix(words), "ap");
     }
 
     @Test
     // 아무것도 겹치지 않을 시 테스트
     public void testProfix_nothing() {
         String[] words = {"abc", "bcd", "cdef"};
-        assertEquals(dp001.getPrefix(words), "");
+        assertEquals(solution.getPrefix(words), "");
     }
 
     @Test
     public void testProfix_ha() {
         String[] words = {"hawaii", "happy"};
-        assertEquals(dp001.getPrefix(words), "ha");
+        assertEquals(solution.getPrefix(words), "ha");
     }
 }
