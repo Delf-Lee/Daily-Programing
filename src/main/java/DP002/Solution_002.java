@@ -10,9 +10,9 @@ public class Solution_002 {
         }
 
         int tmp; // 스왑 변수
-        for (int i = 0; i < rank; i++) {
+        for (int i = 0; i < rank; i++) { // 원하는 순서까지
             for (int j = i; j < nums.length; j++) {
-                if (compare(nums[i], nums[j],descending)) {
+                if (compare(nums[i], nums[j],descending)) { // 선택정렬 실행
                     tmp = nums[i];
                     nums[i] = nums[j];
                     nums[j] = tmp;
