@@ -28,7 +28,7 @@ public class TestSolution_004 {
 
     @Test
     public void testSolution_Case_02() {
-        boolean res = solution.isPossibleOneToOneEncryption("EGG","FOO  ");
+        boolean res = solution.isPossibleOneToOneEncryption("EGG","FOO");
         System.out.println("test 02: " + res);
         assertTrue(res);
     }

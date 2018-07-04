@@ -1,4 +1,4 @@
-# Daily-Programing
+# Daily-Programing (DP)
 
 ## Question
 
@@ -28,3 +28,25 @@ Output: -5
 
 - input: [1, 2, 3, 4, 5]  
 output: [120, 60, 40, 30, 24]
+
+### DP004
+길이가 같은 두 문자열(string) A 와 B가 주어지면, A 가 B 로 1:1 암호화 가능한지 찾으시오.
+
+예제)
+- Input: “EGG”, “FOO”  
+Output: True // E->F, G->O
+- Input: “ABBCD”, “APPLE”  
+Output: True // A->A, B->P, C->L, D->E
+- Input: “AAB”, “FOO”  
+Output: False
+
+### DP005
+String이 주어지면, 중복된 char가 없는 가장 긴 서브스트링 (substring)의 길이를 찾으시오.
+
+예제)
+- Input: “aabcbcbc”  
+Output: 3 // “abc”
+- Input: “aaaaaaaa”  
+Output: 1 // “a”
+- Input: “abbbcedd”
+Output: 4 // “bced”
