@@ -19,14 +19,14 @@ public class TestSolution_003 {
     public void testSolution_Case_01() {
         int[] testInput = {1, 2, 3, 4, 5};
         int[] testOutput = {120, 60, 40, 30, 24};
-        assertArrayEquals(solution.getResultArray(testInput), testOutput);
+        assertArrayEquals(testOutput, solution.getResultArray(testInput));
     }
 
     @Test
     public void testSolution_Case_02() {
         int[] testInput = {24, 31, 7, 17, 9, 11};
         int[] testOutput = {365211, 282744, 1252152, 515592, 973896, 796824};
-        assertArrayEquals(solution.getResultArray(testInput), testOutput);
+        assertArrayEquals(testOutput, solution.getResultArray(testInput));
     }
 
     @AfterClass

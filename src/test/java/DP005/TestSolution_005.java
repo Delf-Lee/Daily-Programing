@@ -23,28 +23,28 @@ public class TestSolution_005 {
     public void testSolutionCase_01() {
         String subString = solution.getNotLongestSubStringWithoutDuplicate("aabcbcbc");
         System.out.println("test 01: " + subString);
-        assertEquals(subString, "abc");
+        assertEquals("abc", subString);
     }
 
     @Test
     public void testSolutionCase_02() {
         String subString = solution.getNotLongestSubStringWithoutDuplicate("aaaaaaaa");
         System.out.println("test 02: " + subString);
-        assertEquals(subString, "a");
+        assertEquals("a", subString);
     }
 
     @Test
     public void testSolutionCase_03() {
         String subString = solution.getNotLongestSubStringWithoutDuplicate("abbbcedd");
         System.out.println("test 03: " + subString);
-        assertEquals(subString, "bced");
+        assertEquals("bced", subString);
     }
 
     @Test
     public void testSolutionCase_04() {
         String subString = solution.getNotLongestSubStringWithoutDuplicate("abbfbabaabfggababgbagfa");
         System.out.println("test 04: " + subString);
-        assertEquals(subString, "abfg");
+        assertEquals("abfg", subString);
     }
 
     @AfterClass

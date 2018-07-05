@@ -21,7 +21,7 @@ public class TestSolution_002 {
         int rank = 2;
 
         int rankedElements = solution.getRankedElementInArray(nums, rank);
-        assertEquals(rankedElements, 4);
+        assertEquals(4, rankedElements);
     }
 
     @Test
@@ -30,7 +30,7 @@ public class TestSolution_002 {
         int rank = 1;
 
         int rankedElements = solution.getRankedElementInArray(nums, rank);
-        assertEquals(rankedElements, 8);
+        assertEquals(8, rankedElements);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class TestSolution_002 {
         int rank = 3;
 
         int rankedElements = solution.getRankedElementInArray(nums, rank);
-        assertEquals(rankedElements, -5);
+        assertEquals(-5, rankedElements);
     }
 
     @AfterClass
