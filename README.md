@@ -68,3 +68,10 @@ Output: Does not exist.
 Output: [5, 3, -1, 0, 0]
 - Input: [3, 0, 3]  
 Output: [3, 3, 0]
+
+### DP008 (매일프로그래밍 - 실리콘밸리 패키지 문제07)
+주어진 string 에 모든 단어를 거꾸로 하시오.
+
+예제)
+- Input: “abc 123 apple”  
+Output: “cba 321 elppa”

@@ -13,7 +13,7 @@ public class TestSolution_007 {
     @BeforeClass
     public static void init() {
         solution = new Solution_007();
-        System.out.println("DP006 Test start");
+        System.out.println("DP007 Test start");
     }
 
     @Test
@@ -48,6 +48,6 @@ public class TestSolution_007 {
 
     @AfterClass
     public static void end() {
-        System.out.println("DP006 Test end");
+        System.out.println("DP007 Test end");
     }
 }
