@@ -2,6 +2,8 @@ package DP009;
 
 import java.util.*;
 
+/* 첫 풀이
+* List 내 interval들을 두개씩 비교해 나가며 겹치면 합침 */
 public class Solution_009 {
     private List<int[]> list; // 결과 interval을 저장할 List
 
