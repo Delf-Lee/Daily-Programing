@@ -12,4 +12,3 @@ Input:
 Start: (0, 0), Finish: (0, 4)
 
 Output: 8
-

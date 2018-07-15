@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
@@ -32,6 +33,7 @@ public class TestSolution_010 {
                 {1, 0, 0, 0, 0, 1},
                 {1, 1, 1, 1, 1, 1}};
         assertEquals(8, solution.getShortestDistance(map, new int[]{0, 0}, new int[]{0, 4}));
+
     }
 
     @Test
