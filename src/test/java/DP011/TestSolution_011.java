@@ -1,6 +1,6 @@
 package DP011;
 
-import org.junit.Before;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -13,7 +13,6 @@ public class TestSolution_011 {
     public static void init() {
         System.out.println("DP011 Test start");
         solution = new Solution_011();
-        ;
     }
 
     @Test
@@ -30,5 +29,9 @@ public class TestSolution_011 {
         assertArrayEquals(new int[]{1, 4}, res);
     }
 
-}
+    @AfterClass
+    public static void end() {
+        System.out.println("DP011 Test end");
+    }
 
+}
