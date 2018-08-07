@@ -9,8 +9,14 @@ public class Solution_010 {
     private int[] finish; // 도착 좌표
     private int[][] dir = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}}; // 탐색할 상하좌우 네 방향
 
+/*
+
+
+    private final int 동
+    private final int 서
+    private final int 남
+    private final int N = 0;*/
     public int getShortestDistance(int[][] map, int[] start, int[] finish) {
-        // 변수 세팅
         this.map = map;
         this.isVisit = new boolean[map.length][map[0].length];
         for (int i = 0; i < isVisit.length; i++) {
@@ -36,7 +42,8 @@ public class Solution_010 {
             nextCol = col + dir[i][0]; // 다음 탐색 좌표 설정
             nextRow = row + dir[i][1];
             if (nextCol < 0 || nextRow < 0 || nextCol > map.length - 1 || nextRow > map[0].length - 1) continue;
-            if (isVisit[nextCol][nextRow] == false && map[nextCol][nextRow] == 1) { // 방문하지 않은 길인가?
+
+            if (!isVisit[nextCol][nextRow]) { // 방문하지 않은 길인가?
                 findDestination(nextCol, nextRow, distance + 1); // 다음 좌표 탐색
             }
         }
