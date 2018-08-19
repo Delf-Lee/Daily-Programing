@@ -18,4 +18,4 @@ Given a sorted integer array and an integer N, check if N exists in the array.
 - Input: [1, 4, 5, 6, 8, 9], 10
 - Output: false
 
-## [풀이](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/DP017/Solution_018.java)
+## [풀이](https://github.com/Delf-Lee/Daily-Programing/blob/master/src/main/java/DP018/Solution_018.java)
