@@ -1,5 +1,6 @@
 package DP002;
 
+import dailyprogramming.Solution_002;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

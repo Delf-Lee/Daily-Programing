@@ -1,6 +1,6 @@
 package DP018;
 
-import DP017.Solution_017;
+import dailyprogramming.Solution_018;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

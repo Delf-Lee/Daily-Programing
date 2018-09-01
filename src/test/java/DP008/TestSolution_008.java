@@ -1,7 +1,6 @@
 package DP008;
 
-import DP003.Solution_003;
-import DP007.Solution_007;
+import dailyprogramming.Solution_008;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

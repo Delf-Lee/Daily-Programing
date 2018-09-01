@@ -1,5 +1,6 @@
 package DP019;
 
+import dailyprogramming.Solution_019;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;

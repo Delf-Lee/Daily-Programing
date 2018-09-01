@@ -1,5 +1,6 @@
 package DP009;
 
+import dailyprogramming.Solution_009_02;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;

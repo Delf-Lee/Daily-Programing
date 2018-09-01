@@ -2,7 +2,7 @@
 
 ## Question
 
-### DP001 (매일프로그래밍 - 실리콘밸리 패키지 문제14)
+### dailyprogramming (매일프로그래밍 - 실리콘밸리 패키지 문제14)
 문자열 배열(string array)이 주어지면, 제일 긴 공통된 접두사(prefix)의 길이를 찾으시오.
 
 - Input: [“apple”, “apps”, “ape”]  
