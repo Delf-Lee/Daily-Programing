@@ -4,7 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
-public class Solution_022 {
+// https://www.acmicpc.net/problem/10825
+public class Q10825 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Grade[] grades = new Grade[sc.nextInt()];

@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 // https://www.acmicpc.net/problem/11651
-public class Solution_021 {
+public class Q11651 {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int[][] points = new int[sc.nextInt()][2];
@@ -20,6 +20,7 @@ public class Solution_021 {
                 else return Integer.compare(p[1], q[1]);
             }
         });
+
         for (int i = 0; i < points.length; i++) {
             System.out.println(points[i][0] + " " + points[i][1]);
         }
