@@ -27,13 +27,15 @@ public class Q10825 {
             }
         });
 
+
         for (int i = 0; i < grades.length; i++) {
             System.out.println(grades[i].name);
         }
     }
 }
 
-class Grade {
+class Grade implements Comparator<Grade> {
+
     String name;
     int kor;
     int eng;
@@ -44,5 +46,17 @@ class Grade {
         this.kor = kor;
         this.eng = eng;
         this.mth = mth;
+    }
+
+    @Override
+    public int compare(Grade o1, Grade o2) {
+        if (o1.kor == o2.kor) {
+            if (o1.eng == o2.eng) {
+                if (o1.mth == o2.mth) return o1.name.compareTo(o2.name);
+                return Integer.compare(o2.mth, o1.mth);
+            }
+            return Integer.compare(o1.eng, o2.eng);
+        }
+        return Integer.compare(o2.kor, o1.kor);
     }
 }

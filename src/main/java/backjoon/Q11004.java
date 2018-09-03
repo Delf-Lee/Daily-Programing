@@ -26,4 +26,5 @@ public class Q11004 {
         }*/
         System.out.println(arr[n]);
     }
+
 }
