@@ -6,17 +6,12 @@ import java.util.Scanner;
 public class Q1934 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[sc.nextInt()];
-        for (int i = 0; i < arr.length; i++) {
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
             int x = sc.nextInt();
             int y = sc.nextInt();
+            System.out.println(getLCM(x, y));
         }
-
-        for (int i = 0; i < arr.length; i++) {
-            int x = sc.nextInt();
-            int y = sc.nextInt();
-        }
-
     }
 
     public static int getLCM(int x, int y) {
