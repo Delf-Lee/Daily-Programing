@@ -3,6 +3,8 @@ package backjoon;
 import java.util.Arrays;
 import java.util.Scanner;
 
+// K번째 수
+// #정렬
 // https://www.acmicpc.net/problem/11004
 public class Q11004 {
     public static void main(String[] args) {

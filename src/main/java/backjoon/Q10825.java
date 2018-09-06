@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
+// 국영수
+// #정렬
 // https://www.acmicpc.net/problem/10825
 public class Q10825 {
     public static void main(String[] args) {

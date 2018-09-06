@@ -3,7 +3,8 @@ package backjoon;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
-
+// 좌표 정렬하기 2
+// #정렬
 // https://www.acmicpc.net/problem/11651
 public class Q11651 {
     public static void main(String args[]) {

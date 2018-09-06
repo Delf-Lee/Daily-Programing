@@ -2,6 +2,7 @@ package backjoon;
 
 import java.util.Scanner;
 
+// 최소공배수
 // https://www.acmicpc.net/problem/1934
 public class Q1934 {
     public static void main(String[] args) {

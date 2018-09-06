@@ -1,7 +1,7 @@
 package backjoon;
- 
-import java.util.Scanner;
 
+import java.util.Scanner;
+// GCD 합
 // https://www.acmicpc.net/problem/9613
 public class Q9613 {
     public static void main(String[] args) {
