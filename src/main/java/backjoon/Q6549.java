@@ -15,11 +15,15 @@ public class Q6549 {
             for (int i = 0; i < arr.length; i++) arr[i] = sc.nextInt();
             int area = 0;
             for (int i = 0; i < arr.length; i++) {
+                System.out.println(i + "----");
                 while (!s.empty() && arr[s.peek()] > arr[i]) {
                     int height = arr[s.pop()];
+                    // System.out.println("height = " + height);
                     int width = i;
+                    System.out.println("width = " + width);
                     if (!s.empty()) width = i - s.peek() - 1;
                     if (width * height > area) area = width * height;
+                    System.out.println("area = " + area);
                 }
                 s.push(i);
             }
