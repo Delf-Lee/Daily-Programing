@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Solution021 {
+public class Solution_021 {
     class Solution {
         public String[] solution(String[] record) {
             Map<String, String> list = new HashMap<>();
@@ -19,6 +19,7 @@ public class Solution021 {
                         break;
                 }
             }
+
             return generateRecord(record, list);
         }
 
