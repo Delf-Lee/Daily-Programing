@@ -1,4 +1,4 @@
-package Temporary;
+package dailyprogramming;
 
 import java.util.StringTokenizer;
 
