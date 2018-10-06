@@ -23,6 +23,7 @@ public class Q1167 {
                 start = i;
             }
         }
+
         dist = find(tree, tree.length, start);
         int ans = dist[1];
         for (int i = 2; i <= tree.length; i++) {
@@ -30,6 +31,7 @@ public class Q1167 {
                 ans = dist[i];
             }
         }
+
         System.out.println(ans);
     }
 
