@@ -1,6 +1,6 @@
 package backjoon;
 
-import java.util.Scanner;
+        import java.util.Scanner;
 // https://www.acmicpc.net/problem/12871
 // 무한문자열
 public class Q12827 {
