@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 // https://www.acmicpc.net/problem/12865
 // 평범한 배낭
-public class Main {
+public class Q12865 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
