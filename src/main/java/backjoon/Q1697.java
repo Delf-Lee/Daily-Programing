@@ -1,8 +1,11 @@
-package _workspace;
+package backjoon;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
 // https://www.acmicpc.net/problem/1697
-public class Main {
+public class Q1697 {
     static final int MAX = 1000000;
 
     public static void main(String args[]) {
