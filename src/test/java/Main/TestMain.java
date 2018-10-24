@@ -607,39 +607,38 @@ public class TestMain {
     public void test120() {
         assertEquals(-1, main.solution("kquac"));
     }
-    /*
     @Test
-    public void test1() {
+    public void test200() {
     assertEquals(2, main.solution("quqacukqauackck"));
     }
 
     @Test
-    public void test2() {
+    public void test300() {
         assertEquals(-1, main.solution("kcauq"));
     }
 
     @Test
-    public void test3() {
+    public void test400() {
         assertEquals(1, main.solution("quackquackquackquackquackquackquackquackquackquack"));
     }
 
     @Test
-    public void test4() {
+    public void test500() {
         assertEquals(10, main.solution("qqqqqqqqqquuuuuuuuuuaaaaaaaaaacccccccccckkkkkkkkkk"));
     }
 
     @Test
-    public void test5() {
+    public void test600() {
         assertEquals(3, main.solution("quqaquuacakcqckkuaquckqauckack"));
     }
 
     @Test
-    public void test6() {
+    public void test700() {
         assertEquals(-1, main.solution("quackqauckquack"));
     }
 
     @Test
-    public void test7() {
+    public void test800() {
         assertEquals(-1, main.solution("q"));
         assertEquals(-1, main.solution("u"));
         assertEquals(-1, main.solution("a"));
@@ -648,7 +647,7 @@ public class TestMain {
     }
 
     @Test
-    public void test8() {
+    public void test900() {
         assertEquals(-1, main.solution("kquac"));
-    }*/
+    }
 }
