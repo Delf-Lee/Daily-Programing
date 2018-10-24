@@ -1,8 +1,11 @@
 package backjoon;
 
+import Temporary.ObjectSizeFetcher;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.instrument.Instrumentation;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,7 +26,6 @@ public class Q12866 {
             System.out.println(0);
             return;
         }
-
         long res = 1;
         for (Character i : map.keySet()) {
             res = (res * map.get(i)) % div;
