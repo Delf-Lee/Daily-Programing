@@ -1,12 +1,14 @@
 package Main;
 
 import _workspace.Main;
+import backjoon.Q12933;
+import backjoon.Q12933_2;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestMain {
-    Main main = new Main();
+public class Q12933Test {
+    Q12933_2 main = new Q12933_2();
 
     @Test
     public void test1() {
