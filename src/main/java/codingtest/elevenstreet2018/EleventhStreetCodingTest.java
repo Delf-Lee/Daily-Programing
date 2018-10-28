@@ -1,4 +1,4 @@
-package dailyprogramming;
+package codingtest.elevenstreet2018;
 
 import java.util.StringTokenizer;
 

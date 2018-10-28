@@ -1,4 +1,4 @@
-package dailyprogramming;
+package codingtest.edailycoding2018challange;
 
 import java.io.BufferedReader;
 import java.io.IOException;

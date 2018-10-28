@@ -11,6 +11,7 @@ public class Solution_029 {
 
         int[] split = Arrays.stream(input.split(" ")).mapToInt(Integer::parseInt).toArray();
 
+        System.out.println(Arrays.toString(split));
         Inventory<Integer> inventory = new Inventory<>();
         for (int item : split) {
             if (inventory.isFull()) {

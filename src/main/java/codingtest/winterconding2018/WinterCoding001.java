@@ -1,4 +1,4 @@
-package dailyprogramming;
+package codingtest.winterconding2018;
 
 import java.util.HashSet;
 import java.util.Set;

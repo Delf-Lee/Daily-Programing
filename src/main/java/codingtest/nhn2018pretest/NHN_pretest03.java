@@ -1,4 +1,4 @@
-package dailyprogramming;
+package codingtest.nhn2018pretest;
 
 import java.util.Scanner;
 

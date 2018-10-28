@@ -10,7 +10,7 @@ public class Q1260 {
         int n = sc.nextInt();
         int m = sc.nextInt();
         int start = sc.nextInt();
-        ArrayList<Integer>[] e = (ArrayList<Integer>[]) new ArrayList[n+1];
+        ArrayList<Integer>[] e = (ArrayList<Integer>[]) new ArrayList[n + 1];
 
         for (int i = 1; i <= n; i++) {
             e[i] = new ArrayList<>();
