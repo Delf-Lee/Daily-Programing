@@ -1,4 +1,4 @@
-package Temporary;
+package codingtest.edailycoding2018challange;
 
 import java.io.*;
 import java.util.*;

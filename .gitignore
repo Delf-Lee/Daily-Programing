@@ -3,6 +3,10 @@
 target/
 .idea/
 .DS_Store
-/src/main/java/Temporary/
-/src/main/test/
-/src/main/java/_workspace/
+# /src/main/java/Temporary/
+# /src/main/test/
+# /src/main/java/_workspace/
+# /src/main/java/backjoon/tmp/
+# /src/test/
+/Temporary/
+/_workspace/
