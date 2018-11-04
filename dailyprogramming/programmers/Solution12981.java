@@ -6,7 +6,7 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package dailyprogramming;
+package dailyprogramming.programmers;
 
 import java.util.Arrays;
 import java.util.Stack;
