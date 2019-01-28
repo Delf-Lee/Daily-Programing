@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class Main {
+public class nhn2017 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Ground[] grounds = new Ground[Integer.parseInt(br.readLine()) + 1];
@@ -17,19 +17,19 @@ public class Main {
         for (int i = 1; i < grounds.length; i++) {
             input = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
             grounds[input[0]] = new Ground(input[1], input[2], input[3]); // 0:index, 1:x, 2:y, 3:r
-            grounds[input[0]].in(0);
+            // grounds[input[0]].in(0);
         }
         int[] spot = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-        if (spot[0] == spot[1]) {
+        /*if (spot[0] == spot[1]) {
             System.out.println(spot[0] + " " + spot[1]);
-        }
+        }*/
         // Arrays.sort(grounds, Collections.reverseOrder());
         System.out.println(Arrays.toString(grounds));
         for (int i = 0; i < spot.length; i++) {
             for (int j = 1; j < grounds.length; j++) {
-                System.out.printf("path[%d](%d) == %d, spot[%d]==spot[%d](%d)\n", i, spot[i], j, (i + 1) % 2, i, spot[i]);
+//                System.out.printf("path[%d](%d) == %d, spot[%d]==spot[%d](%d)\n", i, spot[i], j, (i + 1) % 2, i, spot[i]);
                 if (spot[i] == j) {
-                    System.out.println("continue");
+//                    System.out.println("continue");
                     continue;
                 }
                 /*else if (spot[(i + 1) % 2] == j) {
@@ -43,17 +43,27 @@ public class Main {
                 double d = grounds[spot[i]].getDist(grounds[j]);
                 System.out.printf("bigger=%d(r1=%d), smaller=%d(r2=%d), %d > d=%f\n", bigger, r1, smaller, r2, r1 - r2, d);
                 if (r1 - r2 > d) {
-                    // System.out.println("add");
+                    System.out.println("add");
                     grounds[smaller].in(bigger);
                 }
             }
         }
 
         List<Integer> answer = new ArrayList<>();
-        answer.add(spot[0]); // 출발
+
+        for (Integer i : grounds[spot[0]].getPathOut()) {
+            if(i == spot[1]) break;
+        }
+        for (Integer i : grounds[spot[0]].getPathOut()) {
+            if(i == spot[0]) break;
+                answer.add(i);
+        }
+
+        /*answer.add(spot[0]); // 출발
         answer.addAll(grounds[spot[0]].getPathOut()); // 출발에서 바깥으로
+        // answer.add(999);
         answer.addAll(grounds[spot[1]].getPathIn()); // 바깥에서 도착지점으러
-        answer.add(spot[1]);
+        answer.add(spot[1]);*/
 
         for (Integer i : answer) {
             System.out.print(i + " ");
@@ -61,7 +71,7 @@ public class Main {
     }
 }
 
-class Ground implements Comparable<Ground>  {
+class Ground implements Comparable<Ground> {
     int x, y;
     int r;
     List<Integer> outGround = new ArrayList<>(); // 자신을 포함하고 있는 Ground의 index
@@ -77,7 +87,9 @@ class Ground implements Comparable<Ground>  {
     }
 
     public void in(int gi) {
-        outGround.add(gi);
+        if (!outGround.contains(gi)) {
+            outGround.add(gi);
+        }
     }
 
     public List<Integer> getPathOut() {
@@ -139,3 +151,4 @@ class Ground implements Comparable<Ground>  {
         Arrays.sort(arr);
         return arr;
     }*/
+
