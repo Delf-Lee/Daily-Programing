@@ -1,71 +1,40 @@
 package codility.lesson5;
 
+import java.util.Arrays;
+
 /**
  * @author delf
  */
 public class GenomicRangeQuery {
+    private int plus(char c, int n) {
+        switch (c) {
+            case 'A':
+                return n == 0 ? 1 : 0;
+            case 'C':
+                return n == 1 ? 1 : 0;
+            case 'G':
+                return n == 2 ? 1 : 0;
+        }
+        return 0;
+    }
+
     public int[] solution(String S, int[] P, int[] Q) {
         int[] answer = new int[P.length];
+        int[][] nucleotides = new int[3][S.length() + 1];
 
-        int[] nuA = new int[S.length()];
-        int[] nuC = new int[S.length()];
-        int[] nuG = new int[S.length()];
-
-        switch (S.charAt(0)) {
-            case 'A':
-                nuA[0]++;
-                break;
-            case 'C':
-                nuA[0]++;
-                break;
-            case 'G':
-                nuA[0]++;
-                break;
+        for (int i = 1; i < S.length() + 1; i++) {
+            for (int j = 0; j < nucleotides.length; j++) {
+                nucleotides[j][i] = nucleotides[j][i - 1] + plus(S.charAt(i - 1), j);
+            }
         }
 
-        for (int i = 1; i < S.length(); i++)
-            switch (S.charAt(i)) {
-                case 'A':
-                    nuA[i] = nuA[i - 1] + 1;
-                    nuC[i] = nuC[i - 1];
-                    nuG[i] = nuG[i - 1];
-                    break;
-                case 'C':
-                    nuA[i] = nuA[i - 1];
-                    nuC[i] = nuC[i - 1] + 1;
-                    nuG[i] = nuG[i - 1];
-                    break;
-                case 'G':
-                    nuA[i] = nuA[i - 1];
-                    nuC[i] = nuC[i - 1];
-                    nuG[i] = nuG[i - 1] + 1;
-                    break;
-                default:
-                    nuA[i] = nuA[i - 1];
-                    nuC[i] = nuC[i - 1];
-                    nuG[i] = nuG[i - 1];
-                    break;
-            }
-
-
         for (int i = 0; i < P.length; i++) {
-            if (P[i] > 0) {
-                if (nuA[Q[i]] > nuA[P[i] - 1]) {
-                    answer[i] = 1;
-                } else if (nuC[Q[i]] > nuC[P[i] - 1]) {
-                    answer[i] = 2;
-                } else if (nuG[Q[i]] > nuG[P[i] - 1]) {
-                    answer[i] = 3;
-                } else {
-                    answer[i] = 4;
-                }
-            } else {
-                if (nuA[Q[i]] > 0) {
-                    answer[i] = 1;
-                } else if (nuC[Q[i]] > 0) {
-                    answer[i] = 2;
-                } else if (nuG[Q[i]] > 0) {
-                    answer[i] = 3;
+            int start = P[i];
+            int end = Q[i] + 1;
+            for (int j = 0; j < nucleotides.length; j++) {
+                if (nucleotides[j][end] > nucleotides[j][start]) {
+                    answer[i] = j + 1;
+                    break;
                 } else {
                     answer[i] = 4;
                 }
@@ -73,4 +42,10 @@ public class GenomicRangeQuery {
         }
         return answer;
     }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(new GenomicRangeQuery().solution("CAGCCTA", new int[]{2, 5, 0}, new int[]{4, 5, 6})));
+        // System.out.println(Arrays.toString(new GenomicRangeQuery().solution("A", new int[]{0}, new int[]{0})));
+    }
+
 }
