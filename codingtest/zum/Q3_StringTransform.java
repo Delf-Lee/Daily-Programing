@@ -16,7 +16,6 @@ public class Q3_StringTransform {
                 // 0이하의 인덱스를 참조할 때 무시한다.
                 // 무시해도 문제가 없다.
             }
-
         }
         return sb.toString();
     }
