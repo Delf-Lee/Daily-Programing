@@ -9,7 +9,10 @@ public class MaxProductOfThree {
         Arrays.sort(A);
         int flag;
         for (flag = 0; flag < A.length; flag++) if (A[flag] >= 0) break;
-        boolean zero = A[flag] == 0;
+        boolean zero = false;
+        try {
+            zero = A[flag] == 0;
+        } catch (ArrayIndexOutOfBoundsException e) {}
         int negCnt = flag;
         int posCnt = A.length - flag - (zero ? 1 : 0); // = start index of positive
         int posStartIdx = A.length - posCnt;
@@ -37,6 +40,7 @@ public class MaxProductOfThree {
     }
 
     public static void main(String[] args) {
-        System.out.println(new MaxProductOfThree().solution2(new int[]{-3, 1, 2, -2,0, 5, 6}));
+        // System.out.println(new MaxProductOfThree().solution2(new int[]{-3, 1, 2, -2,0, 5, 6}));
+        System.out.println(new MaxProductOfThree().solution2(new int[]{-1, -2, -3, -4, -5, -6}));
     }
 }
