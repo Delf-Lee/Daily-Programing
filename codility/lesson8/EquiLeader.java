@@ -1,6 +1,5 @@
 package codility.lesson8;
 
-import java.util.NoSuchElementException;
 import java.util.Stack;
 
 /**
@@ -8,59 +7,52 @@ import java.util.Stack;
  */
 public class EquiLeader {
     public int solution(int[] A) {
-        int uqiLeaderCnt = 0;
-        int leader;
-        try {
-            leader = getLeader(A, 0, A.length);
-        } catch (NoSuchElementException e) {
+        if (A.length == 1) {
             return 0;
+        } else if (A.length == 2) {
+            if (A[0] == A[1]) return 1;
+            else return 0;
         }
 
-        for (int i = 0; i < A.length - 1; i++) {
-            if (leader != A[i]) {
-                continue;
-            }
-            try {
-                if (getLeader(A, 0, i) == getLeader(A, i + 1, A.length)) {
-                    /*System.out.printf("%d~%d:%d, %d~%d:%d\n", 0, i, getLeader(A, 0, i), i + 1, A.length, getLeader(A, i + 1, A.length));
-                    System.out.println(i);*/
-                    uqiLeaderCnt++;
-                }
-            } catch (NoSuchElementException e1) {
-                // System.out.println("no2");
-            } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println("arr2");
-            }
-        }
-
-        return uqiLeaderCnt;
-    }
-
-    private int getLeader(int[] A, int start, int end) {
-        System.out.println(start + " " + end);
-        if (end - start == 1) {
-            throw new NoSuchElementException();
-        } else if (end - start == 0) {
-            return A[start];
-        }
-
+        int cnt = 1;
         Stack<Integer> stack = new Stack<>();
-        stack.add(A[start]);
-        for (int i = start + 1; i < end; i++) {
+        stack.add(A[0]);
+        for (int i = 1; i < A.length; i++) {
             if (!stack.isEmpty() && A[i] != stack.peek()) {
                 stack.pop();
             } else {
+                cnt++;
                 stack.push(A[i]);
             }
         }
+        if (stack.isEmpty()) return 0;
 
-        if (stack.isEmpty()) {
-            throw new NoSuchElementException();
+        int equiLeaderCnt = 0;
+        int leaderOrder = 0;
+        int leader = stack.pop();
+        // System.out.printf("leader = %d, cnt = %d\n", leader, cnt);
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] == leader) leaderOrder++;
+            // System.out.printf("%d > %d && %d > %d\n", leaderOrder, (i + 1) / 2, cnt - leaderOrder, (A.length - i - 1) / 2);
+            if ((leaderOrder > (i + 1) / 2) && (cnt - leaderOrder > (A.length - i - 1) / 2)) {
+                equiLeaderCnt++;
+            }
         }
-        return stack.pop();
+
+        return equiLeaderCnt;
     }
 
+    private int getWholeLeader(int[] A) {
+        return 0;
+
+    }
+
+
     public static void main(String[] args) {
-        System.out.println(new EquiLeader().solution(new int[]{4, 3, 4, 4, 4, 2}));
+        int a = new EquiLeader().solution(new int[]{4, 4, 2, 5, 3, 4, 4, 4});
+        System.out.println(a + " " + (a == 3));
+        int b = new EquiLeader().solution(new int[]{1, 2, 1, 1, 2, 1});
+        System.out.println(b + " " + (b == 3));
+
     }
 }
