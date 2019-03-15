@@ -5,6 +5,7 @@ import java.util.Stack;
 /**
  * @author delf
  */
+// https://app.codility.com/demo/results/trainingHHRTDB-BCB/
 public class Dominator {
 
     public int solution(int[] A) {
