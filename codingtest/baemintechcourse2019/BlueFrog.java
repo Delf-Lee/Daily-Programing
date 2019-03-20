@@ -4,7 +4,6 @@ package codingtest.baemintechcourse2019;
  * @author delf
  */
 public class BlueFrog {
-
     public String solution(String word) {
         StringBuilder sb = new StringBuilder();
         for (char c : word.toCharArray()) {

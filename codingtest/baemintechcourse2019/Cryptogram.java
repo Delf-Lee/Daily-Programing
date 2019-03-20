@@ -15,6 +15,8 @@ public class Cryptogram {
             } else {
                 if (stack.peek() == c) {
                     System.out.println(stack.pop());
+                } else {
+                    stack.add(c);
                 }
             }
         }
