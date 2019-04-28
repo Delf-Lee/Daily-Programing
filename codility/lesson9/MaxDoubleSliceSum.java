@@ -31,6 +31,5 @@ public class MaxDoubleSliceSum {
     public static void main(String[] args) {
         System.out.println(new MaxDoubleSliceSum().solution(new int[]{3, 2, 6, -1, 4, 5, -1, 2}));
     }
-
 }
 
