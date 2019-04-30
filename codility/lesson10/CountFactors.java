@@ -4,7 +4,7 @@ package codility.lesson10;
  * @author delf
  */
 public class CountFactors {
-
+    // https://app.codility.com/demo/results/training25JHCR-6X7/
     public int solution(int N) {
         int result = 0;
         for (int i = 1; i <= (int) Math.sqrt(N); i++) {
