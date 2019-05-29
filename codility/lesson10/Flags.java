@@ -2,6 +2,7 @@ package codility.lesson10;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * @author delf
@@ -15,7 +16,6 @@ public class Flags {
 
         List<Integer> peaks = new ArrayList<>();
         for (int i = 1; i < A.length - 1; i++) {
-
             if (Integer.max(A[i - 1], A[i + 1]) < A[i]) {
                 peaks.add(i);
             }
