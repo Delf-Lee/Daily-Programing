@@ -25,15 +25,12 @@ public class Q2 {
 
 		String u = getMinRegularBracketString(s);
 		String v = s.substring(u.length());
-		System.out.println("u = " + u);
-		System.out.println("v = " + v);
 
 		if (isCorrectBracketString(u)) {
 			return u + getCorrectBracketString(v);
 		}
 
 		StringBuilder sb = new StringBuilder();
-		System.out.println("@@" + v);
 		sb.append("(")
 				.append(getCorrectBracketString(v))
 				.append(")")
