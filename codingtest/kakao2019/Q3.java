@@ -6,60 +6,67 @@ import java.util.*;
  * @author delf
  */
 public class Q3 {
+	private Map<Character, TrieNode<Character>> roots = new HashMap<>();
+
 	public static void main(String[] args) {
 		System.out.println(Arrays.toString(new Q3().solution(new String[]{"frodo", "front", "frost", "frozen", "frame", "kakao"}, new String[]{"fro??", "????o", "fr???", "fro???", "pro?"})));
-		System.out.println("word".startsWith(""));
 	}
 
 	public int[] solution(String[] words, String[] queries) {
-		List<Integer> answer = new ArrayList<>();
-		Map<Integer, Set<String>> matcher = createMatcher(words);
-		for (String query : queries) {
-			if (!matcher.containsKey(query.length())) {
-				answer.add(0);
-				continue;
-			}
-			answer.add(countWord(query, matcher.get(query.length())));
-		}
 
-		return answer.stream().mapToInt(i -> i).toArray();
-	}
-
-	private int countWord(String query, Set<String> dictionary) {
-		int result = 0;
-		String modified = getWordStartWithAlphabet(query);
-		for (String word : dictionary) {
-			result += word.startsWith(getCore(modified)) ? 1 : 0;
-		}
-
-		return result;
-	}
-
-	private String getCore(String query) {
-		return query.substring(0, query.indexOf("?"));
-	}
-
-	private Map<Integer, Set<String>> createMatcher(String[] words) {
-		Map<Integer, Set<String>> matcher = new HashMap<>();
 		for (String word : words) {
-			String modified = (new StringBuilder(word)).reverse().toString();
-
-			if (!matcher.containsKey(word.length())) {
-				matcher.put(word.length(), new HashSet<>(Arrays.asList(word, modified)));
-			}
-
-			matcher.get(word.length()).add(modified);
-			matcher.get(word.length()).add(word);
+			// TrieNode<Character> root =
 		}
 
-		return matcher;
+		return null;
 	}
 
-	private String getWordStartWithAlphabet(String word) {
-		if (word.startsWith("?")) {
-			return (new StringBuilder(word)).reverse().toString();
+	private TrieNode<Character> createTrie(String word) {
+		char first = word.charAt(0);
+		TrieNode<Character> root = roots.putIfAbsent(first, new TrieNode<>(first));
+		roots.computeIfAbsent(first, TrieNode::new);
+
+		for (int i = 1; i < word.length(); i++) {
+			// tmp
 		}
-		return word;
+		return root;
 	}
 
+	static class TrieNode<E> {
+		private E e;
+		private long height;
+		private TrieNode parent;
+		private Set<TrieNode> children;
+
+		public TrieNode(E e) {
+			this.e = e;
+		}
+
+		private long getChildrenHeight() {
+			return height + 1;
+		}
+
+		private void setParent(TrieNode<E> parent) {
+			this.parent = parent;
+			this.height = parent.getChildrenHeight();
+		}
+
+		private E getElement() {
+			return e;
+		}
+
+		public void addChild(TrieNode<E> child) {
+			child.setParent(this);
+			children.add(child);
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			return this.getElement().equals(obj);
+		}
+
+		public boolean hasParent(E e) {
+			return children.contains(e);
+		}
+	}
 }
