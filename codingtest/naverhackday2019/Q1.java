@@ -1,43 +1,39 @@
-package codingtest.naverhackday2019;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Q1 {
+    public int[] solution(String[] info, String[] query) {
 
-    public int solution(int[] A) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int n : A) {
-            map.merge(n, 1, Integer::sum);
+        int[] queryScore = new int[query.length];
+        for (int i = 0; i < query.length; i++) {
+            queryScore[i] = Integer.parseInt(query[i].replaceAll("[^0-9]", ""));
+            query[i] = query[i].replaceAll("and |- |[0-9]", "").trim();
         }
 
-        int[] values = new int[6];
+        int[] dbScore = new int[info.length];
+        for (int i = 0; i < info.length; i++) {
+            dbScore[i] = Integer.parseInt(info[i].replaceAll("[^0-9]| ", ""));
+        }
 
-        for (int n : map.keySet()) {
-            for (int i = 0; i < values.length; i++) {
-                if (n == i + 1) {
-                    continue;
-                }
-
-                if (n == 6 - i) {
-                    values[i] += (2 * map.get(n));
-                } else {
-                    values[i] += map.get(n);
+        int[] result = new int[query.length];
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < info.length; j++) {
+                if (find(info[j], query[i]) && dbScore[j] >= queryScore[i]) {
+                    result[i]++;
                 }
             }
         }
-        Arrays.sort(values);
-        System.out.println(Arrays.toString(values));
-        return values[0];
+
+        return result;
     }
 
-    public static void main(String[] args) {
-        System.out.println(new Q1().solution(new int[]{1, 2, 3}));
-        System.out.println(new Q1().solution(new int[]{1, 1, 6}));
-        System.out.println(new Q1().solution(new int[]{1, 6, 2, 3}));
-
+    private boolean find(String origin, String query) {
+        String q[] = query.split(" ");
+        for (String s : q) {
+            if (s.isEmpty()) {
+                continue;
+            }
+            if (!origin.contains(s)) {
+                return false;
+            }
+        }
+        return true;
     }
-
 }
-
