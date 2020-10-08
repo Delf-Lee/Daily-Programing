@@ -1,3 +1,5 @@
+package programmers;
+
 import java.util.*;
 
 public class Solution42840 {

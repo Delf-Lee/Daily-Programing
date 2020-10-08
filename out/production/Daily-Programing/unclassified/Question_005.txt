@@ -1,0 +1,23 @@
+String이 주어지면, 중복된 char가 없는 가장 긴 서브스트링 (substring)의 길이를 찾으시오.
+
+예제)
+Input: “aabcbcbc”
+Output: 3 // “abc”
+
+Input: “aaaaaaaa”
+Output: 1 // “a”
+
+Input: “abbbcedd”
+Output: 4 // “bced”
+
+--- 이하 메모
+
+abcaabcdedeff
+ffffffffffdffffffffff
+
+1. 문자열의 처음부터 순회하면서 hashmap에 해당 문자와 인덱스를 넣음
+2-1. 처음 나온 문자열이다.
+    - 문자와 인덱스를 저장한다.
+2-2. 같은 문자가 나왔다.
+    - 인덱스를 확인하고 그 바로 뒤 인덱스 부터 다시 탐색한다.
+    - hashmap은 초기화

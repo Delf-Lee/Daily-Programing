@@ -1,3 +1,5 @@
+package programmers;
+
 public class Solution12904 {
     public int solution(String s) {
         if (s.length() < 2) {

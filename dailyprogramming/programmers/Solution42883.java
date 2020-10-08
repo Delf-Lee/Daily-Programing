@@ -1,3 +1,5 @@
+package programmers;
+
 public class Solution42883 {
     public static void main(String[] args) {
         System.out.println(new Solution42883().solution("1924", 2));

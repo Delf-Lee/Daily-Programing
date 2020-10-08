@@ -1,4 +1,4 @@
-package dailyprogramming.programmers;
+package programmers;
 
 import java.util.Arrays;
 

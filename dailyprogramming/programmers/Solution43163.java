@@ -1,6 +1,6 @@
-package domain.frame;
+package programmers;
 
-public class Q43163 {
+public class Solution43163 {
     private String[] words;
 
     public int solution(String begin, String target, String[] words) {
@@ -47,7 +47,7 @@ public class Q43163 {
     }
 
     public static void main(String[] args) {
-        System.out.println("답 : " + new Q43163().solution("hit", "cog", new String[]{"hot", "dot", "dog", "lot", "log", "cog"}));
-        System.out.println("답 : " + new Q43163().solution("hit", "cog", new String[]{"hot", "dot", "dog", "lot", "log"}));
+        System.out.println("답 : " + new Solution43163().solution("hit", "cog", new String[]{"hot", "dot", "dog", "lot", "log", "cog"}));
+        System.out.println("답 : " + new Solution43163().solution("hit", "cog", new String[]{"hot", "dot", "dog", "lot", "log"}));
     }
 }

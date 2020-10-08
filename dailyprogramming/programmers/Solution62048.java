@@ -1,3 +1,5 @@
+package programmers;
+
 public class Solution62048 {
     public static void main(String[] args) {
         System.out.println(new Solution62048().solution(8, 12));

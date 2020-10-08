@@ -1,4 +1,4 @@
-package dailyprogramming.programmers.CodingTestQuestion;
+package programmers.CodingTestQuestion;
 
 /**
  * @author delf
